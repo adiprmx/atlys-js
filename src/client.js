@@ -25,7 +25,7 @@ function buildQuery(params) {
 
 export class Atlys {
   /**
-   * @param {string|null} [apiKey] - your Atlys API key (format aclys_...). Omit for demo mode.
+   * @param {string|null} [apiKey] - your Atlys API key (format atlys_...). Omit for demo mode.
    * @param {object} [options]
    * @param {string} [options.baseUrl] - override API base URL
    * @param {number} [options.timeout] - request timeout in ms (default 30000)
