@@ -1,0 +1,43 @@
+{
+  "author": "adiprmx",
+  "description": "JavaScript SDK untuk Atlys API \u2014 100.000 endpoint data publik Indonesia",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "default": "./src/index.js",
+      "import": "./src/index.js",
+      "require": "./cjs/index.cjs"
+    }
+  },
+  "files": [
+    "src/",
+    "cjs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "atlys",
+    "api",
+    "indonesia",
+    "sdk",
+    "osint",
+    "data"
+  ],
+  "license": "MIT",
+  "main": "./cjs/index.cjs",
+  "module": "./src/index.js",
+  "name": "@adiprmx/atlys",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adiprmx/atlys-js"
+  },
+  "scripts": {
+    "build:cjs": "esbuild src/index.js --bundle --format=cjs --platform=node --target=node18 --outfile=cjs/index.cjs",
+    "prepublishOnly": "npm run build:cjs",
+    "test": "node --test test/*.test.js"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
